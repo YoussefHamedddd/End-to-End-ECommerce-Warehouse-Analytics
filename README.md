@@ -2,7 +2,7 @@
 
 ## 🌟 Project Overview
 This project is a comprehensive Data Production Pipeline designed to transform raw e-commerce data from the **Olist Dataset** into actionable business insights.  
-It demonstrates a full **ETL (Extract, Transform, Load)** process, transitioning data from a **Silver staging layer** to a highly optimized **Gold layer** using a **Star Schema architecture**.
+It demonstrates a full **ETL (Extract, Transform, Load)** process, transitioning data from a **Silver staging layer** to a highly optimized **Gold layer** using a ** Galaxy Schema architecture**.
 
 ---
 
@@ -10,7 +10,7 @@ It demonstrates a full **ETL (Extract, Transform, Load)** process, transitioning
 The project is built on a modern data stack to ensure **scalability** and **performance**:
 
 - **Data Warehouse Structure:** Implemented a **multi-layer architecture** (Silver → Gold).
-- **Data Modeling:** Developed a robust **Star Schema** consisting of high-performance Fact tables (**Sales, Geolocation, Reviews**) and descriptive Dimension tables (**Customer, Product, Seller, Time**).
+- **Data Modeling:** Developed a robust **Galaxy Schema** consisting of high-performance Fact tables (**Sales, Geolocation, Reviews**) and descriptive Dimension tables (**Customer, Product, Seller, Time**).
 - **Automation:** Engineered automated **SQL Stored Procedures** to handle data refresh, cleaning, and complex transformations.
 - **Data Quality:** Implemented advanced cleaning techniques, including **Statistical Imputation (Median/Average)** for missing product metrics and **Proxy Logic** for geolocation data gaps.
 
@@ -36,7 +36,7 @@ The final production layer is visualized through an **interactive Executive Dash
 ## 🧰 Tools & Technologies
 - **SQL Server / T-SQL**: Data transformation, stored procedures, ETL pipelines
 - **Power BI**: Interactive dashboards and KPIs visualization
-- **Star Schema Design**: Fact & Dimension tables
+- **Galaxy Schema Design**: Fact & Dimension tables
 - **Data Cleaning Techniques**: Median imputation, proxy logic for missing data
 
 ---
