@@ -22,7 +22,7 @@ I implemented a structured pipeline to manage data evolution, starting from raw 
 * **Gold Layer:** Optimized tables for business intelligence.
 
 <p align="center">
-  <img src="Tables.jpeg" width="400" alt="https://github.com/YoussefHamedddd/End-to-End-ECommerce-Warehouse-Analytics/blob/main/Docs/Tables.jpeg?raw=true">
+  <img src="Tables.jpeg" width="400" alt="Tables">
 </p>
 
 ### 2️⃣ Data Modeling (Star/Galaxy Schema)
