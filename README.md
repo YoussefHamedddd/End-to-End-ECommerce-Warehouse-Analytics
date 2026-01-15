@@ -43,7 +43,7 @@ Focuses on financial health, tracking revenue trends, and top-selling categories
 * **Total Orders:** 99K
 * **Avg. Order Value:** $137.75
 <p align="center">
-  <img src="Page 1.jpg" width="900" alt="Executive Overview">
+  <img src="https://github.com/YoussefHamedddd/End-to-End-ECommerce-Warehouse-Analytics/blob/main/Pages%20of%20Dashboard/OverView.jpg" width="900" alt="Executive Overview">
 </p>
 
 ### 🚚 Logistics & Operations
@@ -51,21 +51,21 @@ Monitoring shipping efficiency and order status distribution to ensure operation
 * **Avg. Delivery Time:** 0.52 Days.
 * **Freight % of Revenue:** 16.57%.
 <p align="center">
-  <img src="Page 2.jpg" width="900" alt="Logistics Dashboard">
+  <img src="https://github.com/YoussefHamedddd/End-to-End-ECommerce-Warehouse-Analytics/blob/main/Pages%20of%20Dashboard/Logistics%20%26%20Operations%20.jpg" width="900" alt="Logistics Dashboard">
 </p>
 
 ### 🛍️ Product Insights & Customer Loyalty
 Analyzing customer feedback and identifying loyal customer segments.
 * **Avg. Review Score:** 4.09 / 5.0.
 <p align="center">
-  <img src="Page 3.jpg" width="900" alt="Product Insights">
+  <img src="https://github.com/YoussefHamedddd/End-to-End-ECommerce-Warehouse-Analytics/blob/main/Pages%20of%20Dashboard/Product%20Insights%20.jpg" width="900" alt="Product Insights">
 </p>
 
 ### 👤 Seller Performance Overview
 Deep dive into seller activity, prep times, and geographic concentration.
 * **Active Sellers:** 3,095.
 <p align="center">
-  <img src="Page 4.jpg" width="900" alt="Seller Performance">
+  <img src="https://github.com/YoussefHamedddd/End-to-End-ECommerce-Warehouse-Analytics/blob/main/Pages%20of%20Dashboard/Sellers%20Insights%20.jpg" width="900" alt="Seller Performance">
 </p>
 
 ---
@@ -74,7 +74,7 @@ Deep dive into seller activity, prep times, and geographic concentration.
 I focused heavily on ensuring the Gold layer was query-optimized. Below is a sample of the validation queries used to test the business logic and performance.
 
 <p align="center">
-  <img src="Sample.jpg" width="700" alt="SQL Code Sample">
+  <img src="https://github.com/YoussefHamedddd/End-to-End-ECommerce-Warehouse-Analytics/blob/main/Docs/Sample.jpeg" width="700" alt="SQL Code Sample">
 </p>
 
 ```sql
