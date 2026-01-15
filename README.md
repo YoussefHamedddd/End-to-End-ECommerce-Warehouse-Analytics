@@ -1,47 +1,89 @@
-# 🏗️ Olist E-Commerce End-to-End Data Pipeline & Analytics
+# 🛒 Olist E-commerce: From 1.5M Raw Records to $14M in Actionable Insights
 
-## 🌟 Project Overview
-This project is a comprehensive Data Production Pipeline designed to transform raw e-commerce data from the **Olist Dataset** into actionable business insights.  
-It demonstrates a full **ETL (Extract, Transform, Load)** process, transitioning data from a **Silver staging layer** to a highly optimized **Gold layer** using a ** Galaxy Schema architecture**.
+![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![Data Engineering](https://img.shields.io/badge/Architecture-Medallion-blue?style=for-the-badge)
 
----
+## 🚀 Project Overview
+This isn't just a dashboard; it's a **Production-Grade Data Pipeline**. I built a robust, scalable architecture to process over **1.58 Million records** from the Olist E-commerce dataset, transforming raw, heterogeneous CSV data into a high-performance Data Warehouse.
 
-## 🛠️ Technical Architecture
-The project is built on a modern data stack to ensure **scalability** and **performance**:
-
-- **Data Warehouse Structure:** Implemented a **multi-layer architecture** (Silver → Gold).
-- **Data Modeling:** Developed a robust **Galaxy Schema** consisting of high-performance Fact tables (**Sales, Geolocation, Reviews**) and descriptive Dimension tables (**Customer, Product, Seller, Time**).
-- **Automation:** Engineered automated **SQL Stored Procedures** to handle data refresh, cleaning, and complex transformations.
-- **Data Quality:** Implemented advanced cleaning techniques, including **Statistical Imputation (Median/Average)** for missing product metrics and **Proxy Logic** for geolocation data gaps.
+The core challenge was **Performance Engineering at Scale**. Without big data frameworks, I pushed SQL Server to its limits by optimizing Stored Procedures and Joins to ensure maximum execution efficiency.
 
 ---
 
-## 📊 Business Insights & Analytics (Power BI)
-The final production layer is visualized through an **interactive Executive Dashboard** that tracks key performance indicators (KPIs):
+## 🏗️ Technical Architecture: The Medallion Approach
 
-- **Financial Metrics:** Real-time tracking of **Total Revenue ($14M)** and **Average Order Value ($137.75)**.
-- **Sales Trends:** Monthly sales analysis using **Area Charts** to identify seasonal trends and growth patterns.
-- **Operational Intelligence:** Logistics tracking and top-performing product categories (e.g., **Health & Beauty**, **Watch Gifts**).
-- **Geospatial Analysis:** Mapping sales distribution across different states to optimize delivery and marketing efforts.
+The project follows the **Medallion Architecture**, ensuring data integrity and quality at every stage.
 
----
+### 1️⃣ Data Pipeline Layers (Bronze to Gold)
+I implemented a structured pipeline to manage data evolution, starting from raw ingestion to analytical readiness.
+* **Bronze Layer:** Raw ingestion of 9 heterogeneous CSV sources.
+* **Silver Layer:** Automated cleansing and standardization.
+* **Gold Layer:** Optimized tables for business intelligence.
 
-## 🔑 Key Features
-- **Dynamic Time Dimension:** A custom-coded calendar generator (**2016-2018**) to enable advanced **Time Intelligence** (YoY, MTD growth).
-- **Optimized Performance:** Used **Integer Surrogate Keys (YYYYMMDD)** for the time dimension to ensure lightning-fast report performance.
-- **User-Centric Design:** Focused on a clean, professional UI with high-contrast elements for better readability.
+<p align="center">
+  <img src="Tables.jpeg" width="400" alt="Medallion Layers in SQL Server">
+</p>
 
----
+### 2️⃣ Data Modeling (Star/Galaxy Schema)
+The architecture connects multiple Fact tables with specialized Dimensions to allow for complex analysis using an optimized **Star Schema**.
 
-## 🧰 Tools & Technologies
-- **SQL Server / T-SQL**: Data transformation, stored procedures, ETL pipelines
-- **Power BI**: Interactive dashboards and KPIs visualization
-- **Galaxy Schema Design**: Fact & Dimension tables
-- **Data Cleaning Techniques**: Median imputation, proxy logic for missing data
+<p align="center">
+  <img src="Star Schema.jpeg" width="800" alt="Star Schema Architecture">
+</p>
 
 ---
 
-## 📈 Outcomes
-- Full **end-to-end ETL pipeline** from raw data to Gold layer
-- Interactive dashboards for **financial, operational, and geospatial insights**
-- Scalable architecture suitable for **real-time business analytics**
+## 📊 Executive Dashboard & KPIs
+Designed an interactive Power BI suite tracking **$14M in revenue** and **99K orders**.
+
+### 📈 Overview & Sales Performance
+Focuses on financial health, tracking revenue trends, and top-selling categories.
+* **Total Revenue:** $14M
+* **Total Orders:** 99K
+* **Avg. Order Value:** $137.75
+<p align="center">
+  <img src="Page 1.jpg" width="900" alt="Executive Overview">
+</p>
+
+### 🚚 Logistics & Operations
+Monitoring shipping efficiency and order status distribution to ensure operational excellence.
+* **Avg. Delivery Time:** 0.52 Days.
+* **Freight % of Revenue:** 16.57%.
+<p align="center">
+  <img src="Page 2.jpg" width="900" alt="Logistics Dashboard">
+</p>
+
+### 🛍️ Product Insights & Customer Loyalty
+Analyzing customer feedback and identifying loyal customer segments.
+* **Avg. Review Score:** 4.09 / 5.0.
+<p align="center">
+  <img src="Page 3.jpg" width="900" alt="Product Insights">
+</p>
+
+### 👤 Seller Performance Overview
+Deep dive into seller activity, prep times, and geographic concentration.
+* **Active Sellers:** 3,095.
+<p align="center">
+  <img src="Page 4.jpg" width="900" alt="Seller Performance">
+</p>
+
+---
+
+## 🛠️ Performance Engineering (SQL Sample)
+I focused heavily on ensuring the Gold layer was query-optimized. Below is a sample of the validation queries used to test the business logic and performance.
+
+<p align="center">
+  <img src="Sample.jpg" width="700" alt="SQL Code Sample">
+</p>
+
+```sql
+-- Analyzing Sales Performance & Monthly Revenue
+SELECT 
+    T.Calendar_Year,
+    T.Calendar_Month,
+    SUM(S.price) AS Monthly_Revenue,
+    COUNT(S.Order_ID) AS Total_Orders
+FROM Gold.Fact_Sales S
+JOIN Gold.Dim_Time T ON S.Order_Purchase_Time_Key = T.Time_Key
+GROUP BY T.Calendar_Year, T.Calendar_Month;
