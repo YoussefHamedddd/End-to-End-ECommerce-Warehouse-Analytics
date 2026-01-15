@@ -5,7 +5,7 @@
 ![Data Engineering](https://img.shields.io/badge/Architecture-Medallion-blue?style=for-the-badge)
 
 ## 🚀 Project Overview
-This isn't just a dashboard; it's a **Production-Grade Data Pipeline**. I built a robust, scalable architecture to process over **1.58 Million records** from the Olist E-commerce dataset, transforming raw, heterogeneous CSV data into a high-performance Data Warehouse.
+This isn't just a dashboard; it's a **Production-Grade Data Pipeline**. I built a robust, scalable architecture to process over **1.58 Million records** from the Olist E-commerce dataset, transforming raw, 9 heterogeneous CSV files data into a high-performance Data Warehouse.
 
 The core challenge was **Performance Engineering at Scale**. Without big data frameworks, I pushed SQL Server to its limits by optimizing Stored Procedures and Joins to ensure maximum execution efficiency.
 
