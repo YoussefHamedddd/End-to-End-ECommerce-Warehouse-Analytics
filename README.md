@@ -29,7 +29,7 @@ I implemented a structured pipeline to manage data evolution, starting from raw 
 The architecture connects multiple Fact tables with specialized Dimensions to allow for complex analysis using an optimized **Star Schema**.
 
 <p align="center">
-  <img src="Star Schema.jpeg" width="800" alt="Star Schema Architecture">
+  <img src="https://github.com/YoussefHamedddd/End-to-End-ECommerce-Warehouse-Analytics/blob/main/Docs/Star%20Schema.jpeg?raw=true" width="800" alt="Star Schema Architecture">
 </p>
 
 ---
