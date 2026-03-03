@@ -26,10 +26,10 @@ I implemented a structured pipeline to manage data evolution, starting from raw 
 </p>
 
 ### 2️⃣ Data Modeling (Galaxy Schema)
-The architecture connects multiple Fact tables with specialized Dimensions to allow for complex analysis using an optimized **Star Schema**.
+The architecture connects multiple Fact tables with specialized Dimensions to allow for complex analysis using an optimized **Galaxy Schema**.
 
 <p align="center">
-  <img src="https://github.com/YoussefHamedddd/End-to-End-ECommerce-Warehouse-Analytics/blob/main/Docs/Star%20Schema.jpeg?raw=true" width="800" alt="Star Schema Architecture">
+  <img src="https://github.com/YoussefHamedddd/End-to-End-ECommerce-Warehouse-Analytics/blob/main/Docs/Galaxy%20Schema.jpeg?raw=true">
 </p>
 
 ---
